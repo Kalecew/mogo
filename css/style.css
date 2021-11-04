@@ -52,7 +52,40 @@ body{
 p{
 	margin: 0;
 }
-
+.center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.overhead{
+	font-family: 'Kaushan Script', cursive;
+	color: #333;
+	font-size: 24px;
+	margin-bottom: 8px;
+}
+.title-wrap{
+	margin-bottom: 100px;
+}
+h2{
+	font-size: 30px;
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+hr{
+	margin: 38px 0;
+	width: 60px;
+	height: 3px;
+	border: none;
+    background-color: #f38181;
+}
+.title-description{
+	color: #999;
+	text-align: center;
+	width: 1090px;
+	/*font-size: 24px;*/
+}
 
 
 /*header*/
@@ -144,13 +177,7 @@ nav ul li.active::after
 	flex-direction: column;
 	position: relative;
 }
-.center{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.desc{
-	font-family: 'Kaushan Script', cursive;
+.intro .overhead{
 	color: #fff;
 	font-size: 72px;
 	margin-bottom: 18px;
@@ -164,11 +191,8 @@ h1{
 	color: #fff;
 	line-height: 1;
 }
-.intro hr{
+h1 + hr{
 	margin: 50px 0;
-	width: 60px;
-	height: 3px;
-	border: none;
     background-color: #fff;
 }
 .intro .btn{
@@ -192,7 +216,7 @@ h1{
 .slider{
 	width: 100%;
 	position: absolute;
-    bottom: 26px;
+    bottom: 0;
 }
 .slider ul{
 	display: flex;
@@ -205,6 +229,7 @@ h1{
 	position: relative;
 	opacity: 0.5;
 	border-top: 3px solid #fff;
+	line-height: 70px;
 }
 .slider ul li.active::before{
 	content: "";
@@ -224,4 +249,57 @@ h1{
 .slider ul li span{
 	font-weight: bold;
 	font-size: 24px;
+}
+
+
+
+
+/*about*/
+.about{
+	padding-top: 90px;
+	padding-bottom: 110px;
+}
+
+
+/*gallery*/
+.gallery ul{
+	display: flex;
+	justify-content: space-between;
+}
+.gallery ul li{
+	position: relative;
+	line-height: 0;
+	box-shadow: 0 0 0 #95e1d3;
+	transition: all .2s linear;
+}
+.gallery ul li:hover{
+	transform: translate(-10px, -10px);
+	box-shadow: 10px 10px 0 #95e1d3;
+}
+.gallery ul li .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(#f38181, #fce38a);
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+.gallery ul li:hover .overlay{
+	opacity: 0.9;
+}
+.gallery ul li .overlay::before{
+	content: "";
+	background: url("../img/users.svg") center no-repeat;
+	display: block;
+	width: 32px;
+	height: 23px;
+}
+.gallery ul li .overlay p{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	font-weight: bold;
 }
