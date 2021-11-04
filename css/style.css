@@ -339,7 +339,7 @@ h1::after{
 	height: 100%;
 }
 .statistics ul li{
-	flex-grow: 1;
+	flex: 1 1 0;
 	font-size: 14px;
 	text-transform: uppercase;
 	border-left: 1px solid rgba(255,255,255,0.3);
