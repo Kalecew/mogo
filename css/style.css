@@ -33,6 +33,13 @@ button{
 	padding: 0;
 	cursor: pointer;
 }
+dl, dd{
+	margin: 0;
+}
+hr{
+	border: 0;
+	margin: 0;
+}
 
 
 /*general*/
@@ -167,10 +174,10 @@ nav ul li.active::after
 	height: 18px;
 }
 .shopping{
-	background: url("../img/cart.svg") center no-repeat;
+	background: url("../img/header/cart.svg") center no-repeat;
 }
 .search{
-	background: url("../img/search.svg") center no-repeat;
+	background: url("../img/header/search.svg") center no-repeat;
 }
 
 
@@ -308,7 +315,7 @@ h1::after{
 }
 .gallery ul li .overlay::before{
 	content: "";
-	background: url("../img/users.svg") center no-repeat;
+	background: url("../img/gallery/users.svg") center no-repeat;
 	display: block;
 	width: 32px;
 	height: 23px;
@@ -351,4 +358,69 @@ h1::after{
 	font-size: 72px;
 	font-weight: bold;
 	line-height: 1.4;
+}
+
+
+/*services*/
+
+.services{
+	padding-top: 110px;
+	padding-bottom: 120px;
+}
+.services .title-wrap{
+	margin-bottom: 30px;
+}
+.services dl{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 74px 2px 74px;
+	column-gap: 60px;
+	row-gap: 46px;
+	position: relative;
+}
+.services dl hr.separator{
+	grid-column: span 3;
+	background-color: #e5e5e5;
+}
+.services dl .dl-item{
+	margin-left: 90px;
+	position: relative;
+}
+.services dl .dl-item::before{
+	content: "";
+	display: block;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 0;
+	left: -60px;
+}
+.services dl .dt-photography::before{
+	background: url("../img/services/clock.svg") center no-repeat;
+}
+.services dl .dt-web-design::before{
+	background: url("../img/services/line-graph.svg") center no-repeat;
+}
+.services dl .dt-creativity::before{
+	background: url("../img/services/computer-ok.svg") center no-repeat;
+}
+.services dl .dt-seo::before{
+	background: url("../img/services/book.svg") center no-repeat;
+}
+.services dl .dt-css-html::before{
+	background: url("../img/services/house.svg") center no-repeat;
+}
+.services dl .dt-digital::before{
+	background: url("../img/services/picture.svg") center no-repeat;
+}
+.services dl dt{
+	color: #333;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.services dl dd{
+	color: #999;
+	font-size: 13px;
 }
