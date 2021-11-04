@@ -71,9 +71,6 @@ p{
 	font-size: 24px;
 	margin-bottom: 8px;
 }
-.title-wrap{
-	margin-bottom: 100px;
-}
 h2{
 	font-size: 30px;
 	color: #333;
@@ -283,6 +280,9 @@ h1::after{
 	padding-top: 90px;
 	padding-bottom: 110px;
 }
+.about .title-wrap{
+	margin-bottom: 100px;
+}
 
 
 /*gallery*/
@@ -423,4 +423,31 @@ h1::after{
 .services dl dd{
 	color: #999;
 	font-size: 13px;
+}
+
+
+
+
+/*unique-design*/
+
+.unique-design{
+	padding-top: 110px;
+	background: url("../img/back-unique-design.png") center no-repeat;
+	background-size: cover;
+}
+.unique-design .container{
+	position: relative;
+}
+.unique-design .title-wrap{
+	margin-bottom: -20px;
+}
+.ipad{
+	display: block;
+	margin: auto;
+	padding-right: 40px;
+}
+.iphone{
+	position: absolute;
+	bottom: -90px;
+	right: 19%;
 }
