@@ -451,3 +451,19 @@ h1::after{
 	bottom: -90px;
 	right: 19%;
 }
+
+
+
+/*what-we-do*/
+
+.what-we-do{
+	padding-top: 110px;
+	padding-bottom: 120px;
+}
+.what-we-do .title-wrap{
+	margin-bottom: 90px;
+}
+.what-we-do .content{
+	display: flex;
+	justify-content: space-between;
+}
