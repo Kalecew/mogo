@@ -576,7 +576,11 @@ h1 + .line{
 	height: 100%;
 }
 
+
+
+
 /*slider-quotes*/
+
 .slider-quotes{
 	height: 100%;
 	padding: 0 80px;
@@ -584,6 +588,7 @@ h1 + .line{
 	align-items: center;
 	position: relative;
 }
+/*стрелки*/
 .slider-quotes::before, 
 .slider-quotes::after{
 	content: "";
@@ -594,16 +599,16 @@ h1 + .line{
 	border-top: 2px solid #ccc;
 	border-right: 2px solid #ccc;
 	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50px);
 }
 .slider-quotes::before{	
 	transform: rotate(-135deg);
-	left: 20px;
-	top: 50%;
+	left: 20px;	
 }
 .slider-quotes::after{
 	transform: rotate(45deg);
 	right: 20px;
-	top: 50%;
 }
 .slider-quotes figure{
 	margin-left: 240px;
