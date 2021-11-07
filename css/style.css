@@ -378,7 +378,7 @@ h1::after{
 	row-gap: 46px;
 	position: relative;
 }
-.services dl hr.separator{
+.services dl .separator{
 	grid-column: span 3;
 	background-color: #e5e5e5;
 }
