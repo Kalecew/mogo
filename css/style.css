@@ -467,3 +467,114 @@ h1::after{
 	display: flex;
 	justify-content: space-between;
 }
+.what-we-do .accordion{
+	width: 50%;
+}
+.what-we-do img{
+	width: 570px;
+	height: 380px;
+}
+
+
+/*accordion*/
+
+.accordion dt{
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 18px 60px;
+	position: relative;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+/*иконка*/
+.accordion dt::before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	width: 32px;
+	height: 32px;
+}
+/*стрелка*/
+.accordion dt::after{
+	content: "";
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 22px;
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid #999;
+	border-right: 2px solid #999;
+	transform: rotate(135deg);
+}
+.accordion dt.dt-photography::before{
+ 	background: url("../img/whatwedo/image.svg") center no-repeat;
+}
+.accordion dt.dt-creativity::before{
+ 	background: url("../img/whatwedo/equalizer.svg") center no-repeat;
+}
+.accordion dt.dt-web-design::before{
+ 	background: url("../img/whatwedo/target.svg") center no-repeat;
+}
+.accordion dt.active::after{
+	transform: rotate(-45deg);
+	margin-top: 4px;
+}
+.accordion dt.active + dd{
+	max-height: 180px;
+	padding: 20px 25px 20px 20px;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+.accordion dd{
+	margin: 0;
+	font-weight: 300;
+	font-style: italic;	
+	border: none;
+	margin-bottom: 10px;
+	max-height: 0;
+	padding: 0;	
+	color: #999;
+	position: relative;
+	scrollbar-width: thin;
+	overflow: hidden;
+}
+.accordion dd p{
+	overflow-y: auto;
+	max-height: 136px;
+	padding-right: 20px;
+}
+
+/*.accordion dd:before{ 
+	content: "";
+	display: block;
+	position: sticky;
+	left: 0;
+	right: 0;
+	top: -1px;
+	height: 26px;
+	box-shadow: 0px 25px 15px 0 rgba(255, 255, 255, 1) inset;
+}
+.accordion dd:after{
+	content: "";
+	display: block;
+	position: sticky;
+	left: 0;
+	right: 0;
+	bottom: -1px;
+	height: 26px;
+	box-shadow: 0px -25px 15px 0 rgba(255, 255, 255, 1) inset;
+}*/
+.accordion dd p::-webkit-scrollbar {
+  width: 5px;
+}
+.accordion dd p::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 25px;
+}
+.accordion dd p::-webkit-scrollbar-thumb {
+  background-color: #95e1d3;
+  border-radius: 25px;
+}
