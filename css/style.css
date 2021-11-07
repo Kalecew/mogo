@@ -616,9 +616,10 @@ h1 + .line{
 .slider-quotes figure::before{
 	content: "";
 	display: block;
-	width: 152px;
-	height: 152px;
-	background: url("../img/quotes/speach.svg");
+	width: 150px;
+	height: 150px;
+	background: url("../img/quotes/speach.svg") center no-repeat;
+	background-size: cover;
 	position: absolute;
 	top: 35px;
 	left: 112px;
