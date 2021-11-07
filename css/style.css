@@ -319,19 +319,20 @@ h1 + .line{
 .gallery ul li:hover .overlay{
 	opacity: 0.9;
 }
-.gallery ul li .overlay::before{
-	content: "";
-	background: url("../img/gallery/users.svg") center no-repeat;
-	display: block;
-	width: 32px;
-	height: 23px;
-}
 .gallery ul li .overlay p{
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 18px;
 	line-height: 36px;
 	font-weight: bold;
+}
+.gallery ul li .overlay p::before{
+	content: "";
+	background: url("../img/gallery/users.svg") center no-repeat;
+	display: block;
+	width: 32px;
+	height: 23px;
+	margin: 0 auto;
 }
 
 
@@ -645,3 +646,95 @@ h1 + .line{
 }
 
 
+
+
+/*team*/
+.team{
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.team .title-wrap{
+	margin-bottom: 90px;
+}
+
+
+/*gallery2*/
+.gallery2{
+	display: flex;
+	justify-content: space-between;
+}
+.gallery2 figure .img-wrap{
+	box-shadow: 0 0 0 #95e1d3;
+	transition: all .2s linear;
+	position: relative;
+}
+.gallery2 figure .img-wrap:hover{
+	transform: translate(-10px, -10px);
+	box-shadow: 10px 10px 0 #95e1d3;
+}
+.gallery2 figure .img-wrap img{
+	display: block;
+}
+.gallery2 figure .img-wrap .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(#f38181, #fce38a);
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+.gallery2 figure:hover .img-wrap .overlay{
+	opacity: 0.9;
+}
+.gallery2 figure figcaption{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.gallery2 figure .title{
+	color: #333;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 2;
+}
+.gallery2 figure .desc{
+	color: #999;
+	font-size: 15px;
+	line-height: 2;
+	font-weight: 300;
+	font-style: italic;
+}
+.gallery2 figure .overlay .social-wrap{
+	display: flex;
+}
+.gallery2 figure .overlay .social-wrap a{
+	font-size: 0;
+	width: 56px;
+	height: 56px;
+	display: block;
+	background: #fce38a;
+	position: relative;
+}
+.gallery2 figure .overlay .social-wrap a + a{
+	margin-left: 1px;
+}
+.gallery2 figure .overlay .social-wrap a:hover{
+	background: #f38181;
+}
+.gallery2 figure .overlay .social-wrap a::before{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 26px;
+	height: 26px;
+	font-size: 15px;
+	
+}
+/*.gallery2 figure .overlay .social-wrap a.facebook::before{
+	content: "\f39e";
+	
+}*/
