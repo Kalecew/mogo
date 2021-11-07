@@ -77,19 +77,18 @@ h2{
 	font-weight: bold;
 	text-transform: uppercase;
 }
-h2::after{
-	content: "";
-	display: block;
-	margin: 38px auto;
+.line{
 	width: 60px;
 	height: 3px;
     background-color: #f38181;
+}
+h2 + .line{
+	margin: 38px auto;
 }
 .title-description{
 	color: #999;
 	text-align: center;
 	width: 1090px;
-	/*font-size: 24px;*/
 }
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
@@ -208,9 +207,7 @@ h1{
 	color: #fff;
 	line-height: 1;
 }
-h1::after{
-	content: "";
-	display: block;
+h1 + .line{
 	margin: 50px auto;
 	width: 60px;
 	height: 3px;
@@ -546,27 +543,6 @@ h1::after{
 	max-height: 136px;
 	padding-right: 20px;
 }
-
-/*.accordion dd:before{ 
-	content: "";
-	display: block;
-	position: sticky;
-	left: 0;
-	right: 0;
-	top: -1px;
-	height: 26px;
-	box-shadow: 0px 25px 15px 0 rgba(255, 255, 255, 1) inset;
-}
-.accordion dd:after{
-	content: "";
-	display: block;
-	position: sticky;
-	left: 0;
-	right: 0;
-	bottom: -1px;
-	height: 26px;
-	box-shadow: 0px -25px 15px 0 rgba(255, 255, 255, 1) inset;
-}*/
 .accordion dd p::-webkit-scrollbar {
   width: 5px;
 }
