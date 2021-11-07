@@ -40,6 +40,15 @@ hr{
 	border: 0;
 	margin: 0;
 }
+figure{
+	margin: 0;
+}
+blockquote{
+	margin: 0;
+}
+cite{
+	font-style: unset;
+}
 
 
 /*general*/
@@ -506,6 +515,10 @@ h1 + .line{
 	border-right: 2px solid #999;
 	transform: rotate(135deg);
 }
+.accordion dt.active::after{
+	transform: rotate(-45deg);
+	margin-top: 4px;
+}
 .accordion dt.dt-photography::before{
  	background: url("../img/whatwedo/image.svg") center no-repeat;
 }
@@ -514,10 +527,6 @@ h1 + .line{
 }
 .accordion dt.dt-web-design::before{
  	background: url("../img/whatwedo/target.svg") center no-repeat;
-}
-.accordion dt.active::after{
-	transform: rotate(-45deg);
-	margin-top: 4px;
 }
 .accordion dt.active + dd{
 	max-height: 180px;
@@ -554,3 +563,79 @@ h1 + .line{
   background-color: #95e1d3;
   border-radius: 25px;
 }
+
+
+/*quotes*/
+.quotes{
+	height: 290px;
+	background-color: #f8f8f8;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.quotes .container{
+	height: 100%;
+}
+
+/*slider-quotes*/
+.slider-quotes{
+	height: 100%;
+	padding: 0 80px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.slider-quotes::before, 
+.slider-quotes::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-top: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	cursor: pointer;
+}
+.slider-quotes::before{	
+	transform: rotate(-135deg);
+	left: 20px;
+	top: 50%;
+}
+.slider-quotes::after{
+	transform: rotate(45deg);
+	right: 20px;
+	top: 50%;
+}
+.slider-quotes figure{
+	margin-left: 240px;
+}
+.slider-quotes figure::before{
+	content: "";
+	display: block;
+	width: 152px;
+	height: 152px;
+	background: url("../img/quotes/speach.svg");
+	position: absolute;
+	top: 35px;
+	left: 112px;
+}
+.slider-quotes figure blockquote{
+	font-style: italic;
+	font-weight: 300;
+	font-size: 20px;
+	color: #999;
+}
+.slider-quotes figure figcaption{
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+}
+.slider-quotes figure figcaption .line{
+	margin-right: 10px;
+}
+.slider-quotes figure figcaption cite{
+	color: #333;
+	font-size: 24px;
+	font-family: 'Kaushan Script', cursive;
+}
+
+
