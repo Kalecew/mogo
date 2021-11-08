@@ -826,3 +826,85 @@ h1 + .line{
 	font-weight: 300;
 	font-style: italic;
 }
+
+
+
+
+/*reviews*/
+
+.reviews{
+	height: 440px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.reviews .container{
+	height: 100%;
+}
+
+
+/*slider-reviews*/
+
+.slider-reviews{
+	height: 100%;
+	padding: 0 80px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+/*стрелки*/
+.slider-reviews::before, 
+.slider-reviews::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-top: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50px);
+}
+.slider-reviews::before{	
+	transform: rotate(-135deg);
+	left: 20px;	
+}
+.slider-reviews::after{
+	transform: rotate(45deg);
+	right: 20px;
+}
+.slider-reviews figure{
+	margin-left: 240px;
+}
+.slider-reviews figure .img_wrap{
+	width: 210px;
+	height: 210px;
+	position: absolute;
+	top: 50%;
+	left: 80px;
+	transform: translateY(-50%);
+	overflow: hidden;
+	border-radius: 50%;
+}
+.slider-reviews figure .img_wrap img{
+	margin-left: -50px;
+}
+.slider-reviews figure blockquote{
+	font-style: italic;
+	font-weight: 300;
+	font-size: 20px;
+	color: #999;
+}
+.slider-reviews figure figcaption{
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+}
+.slider-reviews figure figcaption .line{
+	margin-right: 10px;
+}
+.slider-reviews figure figcaption cite{
+	color: #333;
+	font-size: 24px;
+	font-family: 'Kaushan Script', cursive;
+}
