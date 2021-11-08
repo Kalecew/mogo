@@ -739,3 +739,19 @@ h1 + .line{
 .gallery2 figure .overlay .social-wrap a:hover::before{
 	color: #fff;
 }
+
+
+
+
+/*clients*/
+
+.clients{
+	background-color: #f8f8f8;
+	height: 250px;
+}
+.clients .container{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
