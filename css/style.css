@@ -757,3 +757,72 @@ h1 + .line{
 	justify-content: space-between;
 	align-items: center;
 }
+
+
+
+
+
+/*our-work*/
+
+.our-work{
+	padding-top: 110px;
+}
+.our-work .title-wrap{
+	margin-bottom: 100px;
+}
+
+
+
+
+/*gallery3*/
+.gallery3{
+	width: 1920px;
+	margin: 0 auto;
+}
+.gallery3 ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+.gallery3 ul li{
+	position: relative;
+	line-height: 0;
+	box-shadow: 0 0 0 #95e1d3;
+	transition: all .2s linear;
+}
+.gallery3 ul li.long{
+	grid-row: span 2;
+}
+.gallery3 ul li .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(#f38181, #fce38a);
+	opacity: 0;
+	transition: opacity .2s linear;
+}
+.gallery3 ul li:hover .overlay{
+	opacity: 0.9;
+}
+.gallery3 ul li .overlay .title{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 14px;
+	line-height: 4;
+}
+.gallery3 ul li .overlay .title::before{
+	content: "";
+	background: url("../img/gallery3/image.svg") center no-repeat;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+}
+.gallery3 ul li .overlay .desc{
+	color: #fff;
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+}
