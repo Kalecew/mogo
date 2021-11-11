@@ -29,6 +29,7 @@ li{
 a{
 	color: inherit;
 	text-decoration: none;
+	display: block;
 }
 button{
 	border: 0;
@@ -95,7 +96,7 @@ h2{
     background-color: #f38181;
 }
 h2 + .line{
-	margin: 38px auto;
+	margin: 30px auto 40px;
 }
 .title-description{
 	color: #999;
@@ -717,7 +718,6 @@ h1 + .line{
 	font-size: 0;
 	width: 56px;
 	height: 56px;
-	display: block;
 	background: #fce38a;
 	position: relative;
 	transition: background .2s linear;
@@ -876,7 +876,7 @@ h1 + .line{
 .slider-reviews figure{
 	margin-left: 240px;
 }
-.slider-reviews figure .img_wrap{
+.slider-reviews figure .img-wrap{
 	width: 210px;
 	height: 210px;
 	position: absolute;
@@ -886,7 +886,7 @@ h1 + .line{
 	overflow: hidden;
 	border-radius: 50%;
 }
-.slider-reviews figure .img_wrap img{
+.slider-reviews figure .img-wrap img{
 	margin-left: -50px;
 }
 .slider-reviews figure blockquote{
@@ -936,7 +936,7 @@ h1 + .line{
 	padding-right: 40px;
 	position: relative;
 }
-.block-reviews .reviews-item .img_wrap{
+.block-reviews .reviews-item .img-wrap{
 	width: 110px;
 	height: 110px;
 	border-radius: 50%;
@@ -959,4 +959,100 @@ h1 + .line{
 	font-size: 14px;
 	margin-top: 18px;
 	color: #999;
+}
+
+
+
+/*latest-blog*/
+
+.latest-blog{
+	padding-top: 110px;
+	padding-bottom: 110px;
+}
+
+
+
+/*latest-posts*/
+
+.latest-posts{
+	display: flex;
+	justify-content: space-between;
+}
+.latest-posts .latest-posts-item{
+	width: 32%;
+}
+.latest-posts .latest-posts-item .img-wrap{
+	position: relative;
+	margin-bottom: 18px;
+}
+.latest-posts .latest-posts-item .img-wrap img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.latest-posts .latest-posts-item .img-wrap .date{
+	width: 60px;
+	height: 70px;
+	background-color: #95e1d3;
+	font-weight: 300;
+	font-style: italic;
+	color: #fff;
+	line-height: 1;
+	position: absolute;
+	bottom: 10px;
+	left: -10px;
+}
+.latest-posts .latest-posts-item .img-wrap .date span{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 32px;
+}
+.latest-posts .latest-posts-item .title{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+.latest-posts .latest-posts-item .desc{
+	font-size: 14px;
+	color: #999;
+	margin-bottom: 18px;
+}
+.latest-posts .latest-posts-item .separator{
+	width: 100%;
+	height: 1px;
+	background-color: #e5e5e5;
+}
+.latest-posts .latest-posts-item .stat{
+	color: #b3b3b3;
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	margin-top: 18px;
+	display: flex;
+}
+.latest-posts .latest-posts-item .stat .views-number{
+	position: relative;
+	margin-left: 25px;
+}
+.latest-posts .latest-posts-item .stat .comments-number{
+	position: relative;
+	margin-left: 40px;
+}
+.latest-posts .latest-posts-item .stat p::before{
+	content: "";
+	display: block;
+	height: 15px;
+	position: absolute;
+	top:  50%;
+	transform: translateY(-50%);
+}
+.latest-posts .latest-posts-item .stat .views-number::before{
+	width: 20px;
+	left: -25px;
+	background: url("../img/latest-blog/view.svg") center no-repeat;
+}
+.latest-posts .latest-posts-item .stat .comments-number::before{
+	width: 16px;
+	left: -20px;
+	background: url("../img/latest-blog/comment.svg") center no-repeat;
 }
