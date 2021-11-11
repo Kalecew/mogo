@@ -908,3 +908,55 @@ h1 + .line{
 	font-size: 24px;
 	font-family: 'Kaushan Script', cursive;
 }
+
+
+
+/*people-say*/
+
+.people-say{
+	padding-top: 105px;
+	padding-bottom: 130px;
+	background: url("../img/back-people-say.jpg") center no-repeat;
+	background-size: cover;
+}
+
+
+
+/*block-reviews*/
+
+.block-reviews{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 60px;
+	margin-top: 40px;
+}
+.block-reviews .reviews-item{
+	padding-left: 180px;
+	padding-right: 40px;
+	position: relative;
+}
+.block-reviews .reviews-item .img_wrap{
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	position: absolute;
+	left: 40px;
+	top: 0;
+	overflow: hidden;
+}
+.block-reviews .reviews-item cite{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.block-reviews .reviews-item .position{
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	margin-bottom: 18px;
+}
+.block-reviews .reviews-item blockquote{
+	font-size: 14px;
+	margin-top: 18px;
+	color: #999;
+}
