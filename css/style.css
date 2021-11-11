@@ -53,6 +53,9 @@ blockquote{
 cite{
 	font-style: unset;
 }
+input:focus, input:active{
+	outline: 0;
+}
 
 
 /*general*/
@@ -66,7 +69,7 @@ body{
 	scroll-behavior: smooth;
 }
 .container{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 p{
@@ -130,7 +133,7 @@ header .container{
 	display: flex;
 	align-items: center;
 }
-.logo{
+header .logo{
 	font-size: 30px;
 	font-weight: 700;
 	color: #fff;
@@ -1063,4 +1066,180 @@ h1 + .line{
 }
 .open-map .title-wrap .line{
 	margin: 15px 0 0;
+}
+
+
+
+/*footer*/
+
+footer{
+	background-color: #f8f8f8;
+	padding-top: 70px;
+}
+footer .container{
+	display: flex;
+	column-gap: 50px;
+}
+footer .left-block{
+	flex-basis: 460px;
+}
+footer .left-block .logo{
+	color: #ccc;
+	font-weight: bold;
+	font-size: 46px;
+	line-height: 1;
+	margin-bottom: 34px;
+}
+footer .left-block .desc{
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 46px;
+}
+footer .left-block .followers{
+	color: #333;
+	margin-bottom: 14px;
+}
+footer .left-block .followers span{
+	font-weight: bold;
+	font-size: 20px;
+}
+footer .left-block .social{
+	border-top: 1px solid #e5e5e5;
+	padding-top: 14px;
+	margin-bottom: 30px;
+}
+footer .left-block .social .title{
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	color: #999;
+	display: inline-block;
+	margin-right: 24px;
+}
+footer .left-block .social a{
+	font-size: 0;
+	margin-right: 14px;
+}
+footer .left-block .social a::before{
+	font-size: 15px;
+	color: #95e1d3;
+}
+footer .blogs{
+	flex-basis: 370px;
+}
+footer .blogs>.title{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 46px;
+}
+footer .blogs .blogs-item{
+	margin-left: 140px;
+	position: relative;
+	height: 80px;
+	margin-bottom: 28px;
+	padding-top: 18px;
+}
+footer .blogs .blogs-item:last-child{
+	margin-bottom: 0;
+}
+footer .blogs .blogs-item img{
+	position: absolute;
+	left: -140px;
+	top: 0;
+}
+footer .blogs .blogs-item .title{
+	font-size: 12px;
+	text-transform: uppercase;
+}
+footer .blogs .blogs-item .date{
+	color: #999;
+	font-size: 11px;
+	font-weight: 300;
+	font-style: italic;
+}
+footer .instagram{
+	flex-basis: 270px;
+}
+footer .instagram .title{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 46px;
+}
+footer .instagram .instagram-photos{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2px;
+}
+footer .instagram .instagram-photos img{
+	width: 100%;
+	height: auto;
+}
+footer .instagram .more{
+	color: #666;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	margin-top: 15px;
+}
+footer .copyright{
+	width: 100%;
+	font-size: 14px;
+	height: 60px;
+	border-top: 1px solid #e5e5e5;
+	margin-top: 70px;
+}
+footer .copyright span{
+	color:  #f38181;
+}
+
+
+
+
+
+/*form*/
+form.input-container { 
+	max-width: 380px;
+  	display: flex;
+} 
+form.input-container .add-on{ 
+	display: inline-block;
+	padding: 0 34px;  
+	background-color: #95e1d3; 
+	color: #fff; 
+	vertical-align: top;
+	flex-shrink: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 40px;
+	border: 3px solid #95e1d3;
+	transition: all .2s linear;
+} 
+form.input-container .add-on:hover{
+	background-color: transparent;
+	color: #333;
+}
+form.input-container .input { 
+	padding: 8px 12px; 
+	border: 1px solid #e5e5e5; 
+	border-right: 0;
+	flex-grow: 1;
+	min-width: 50px; /*по-умолчанию min-width слишком большой */
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+} 
+form.input-container .input::-webkit-input-placeholder { /* Chrome */
+	color: #e5e5e5;
+}
+form.input-container .input:-ms-input-placeholder { /* IE 10+ */
+	color: #e5e5e5;
+}
+form.input-container .input::-moz-placeholder { /* Firefox 19+ */
+	color: #e5e5e5;
+	opacity: 1;
+}
+form.input-container .input:-moz-placeholder { /* Firefox 4 - 18 */
+	color: #e5e5e5;
+	opacity: 1;	
 }
