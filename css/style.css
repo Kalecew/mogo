@@ -1030,31 +1030,12 @@ h1 + .line{
 	margin-top: 18px;
 	display: flex;
 }
-.latest-posts .latest-posts-item .stat .views-number{
-	position: relative;
-	margin-left: 25px;
-}
 .latest-posts .latest-posts-item .stat .comments-number{
 	position: relative;
-	margin-left: 40px;
+	margin-left: 15px;
 }
-.latest-posts .latest-posts-item .stat p::before{
-	content: "";
-	display: block;
-	height: 15px;
-	position: absolute;
-	top:  50%;
-	transform: translateY(-50%);
-}
-.latest-posts .latest-posts-item .stat .views-number::before{
-	width: 20px;
-	left: -25px;
-	background: url("../img/latest-blog/view.svg") center no-repeat;
-}
-.latest-posts .latest-posts-item .stat .comments-number::before{
-	width: 16px;
-	left: -20px;
-	background: url("../img/latest-blog/comment.svg") center no-repeat;
+.latest-posts .latest-posts-item .stat i{
+	color: #95e1d3;
 }
 
 
@@ -1070,22 +1051,15 @@ h1 + .line{
 .open-map .title-wrap{
 	height: 100%;
 }
-.open-map .title-wrap h2{
-	font-size: 24px;
+.open-map .title-wrap i{
+	font-size: 30px;
 	color: #f38181;
-	margin-top: 30px;
-	position: relative;
 }
-.open-map .title-wrap h2::before{
-	content: "";
-	position: absolute;
-	display: block;
-	width: 19px;
-	height: 26px;
-	background: url("../img/open-map/pin-map.svg") center no-repeat;
-	left: 50%;
-	transform: translateX(-50%);
-	top: -40px;
+.open-map .title-wrap h2{
+	color: #f38181;
+	font-size: 24px;
+	margin-top: 10px;
+	position: relative;
 }
 .open-map .title-wrap .line{
 	margin: 15px 0 0;
