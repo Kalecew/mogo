@@ -1056,3 +1056,37 @@ h1 + .line{
 	left: -20px;
 	background: url("../img/latest-blog/comment.svg") center no-repeat;
 }
+
+
+
+
+/*open-map*/
+
+.open-map{
+	height: 200px;
+	background: url("../img/back-open-map.jpg") center no-repeat;
+	background-size: cover;
+}
+.open-map .title-wrap{
+	height: 100%;
+}
+.open-map .title-wrap h2{
+	font-size: 24px;
+	color: #f38181;
+	margin-top: 30px;
+	position: relative;
+}
+.open-map .title-wrap h2::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 19px;
+	height: 26px;
+	background: url("../img/open-map/pin-map.svg") center no-repeat;
+	left: 50%;
+	transform: translateX(-50%);
+	top: -40px;
+}
+.open-map .title-wrap .line{
+	margin: 15px 0 0;
+}
