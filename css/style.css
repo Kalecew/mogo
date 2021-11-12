@@ -70,7 +70,9 @@ input, button{
 	font-family: 'Montserrat', sans-serif;
 }
 .container{
-	max-width: 1200px;
+	max-width: 1230px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 p{
@@ -105,7 +107,7 @@ h2 + .line{
 .title-description{
 	color: #999;
 	text-align: center;
-	width: 1090px;
+	max-width: 1090px;
 }
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
@@ -140,10 +142,32 @@ header .logo{
 	color: #fff;
 	margin-right: auto;
 }
+header .user-buttons{
+	margin-left: 50px;
+	width: 76px;
+	display: flex;
+	justify-content: space-between;
+}
+header .user-buttons button{
+	font-size: 0;
+	width: 18px;
+	height: 18px;
+}
+header .user-buttons .shopping{
+	background: url("../img/header/cart.svg") center no-repeat;
+}
+header .user-buttons .search{
+	background: url("../img/header/search.svg") center no-repeat;
+}
+
+
+
+/*nav*/
 nav{
 	text-transform: uppercase;
 	font-size: 14px;
 	width: 494px;	
+	margin-left: 40px;
 }
 nav ul{
 	display: flex;
@@ -178,23 +202,7 @@ nav ul li.active::after
 	opacity: 1;
 	background-color: #fce38a;
 }
-.user-buttons{
-	margin-left: 50px;
-	width: 76px;
-	display: flex;
-	justify-content: space-between;
-}
-.user-buttons button{
-	font-size: 0;
-	width: 18px;
-	height: 18px;
-}
-.shopping{
-	background: url("../img/header/cart.svg") center no-repeat;
-}
-.search{
-	background: url("../img/header/search.svg") center no-repeat;
-}
+
 
 
 /*intro*/
@@ -218,8 +226,7 @@ nav ul li.active::after
 	font-size: 72px;
 	margin-bottom: 18px;
 }
-h1{
-	width: 980px;
+.intro h1{
 	font-size: 150px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -227,7 +234,7 @@ h1{
 	color: #fff;
 	line-height: 1;
 }
-h1 + .line{
+.intro h1 + .line{
 	margin: 50px auto;
 	width: 60px;
 	height: 3px;
@@ -252,15 +259,16 @@ h1 + .line{
 /*slider*/
 
 .slider{
-	width: 100%;
 	position: absolute;
-    bottom: 0;
+    bottom: 0px;
+    left: 15px;
+    right: 15px;
 }
 .slider ul{
 	display: flex;
 }
 .slider ul li{
-	flex-grow: 1;
+	flex: 1 1;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 18px;
@@ -273,7 +281,7 @@ h1 + .line{
 	content: "";
 	display: block;
 	position: absolute;
-	width: 70px;
+	width: 25%;
 	height: 3px;
 	top: -3px;
 	background-color: #f38181;
@@ -783,8 +791,9 @@ h1 + .line{
 
 /*gallery3*/
 .gallery3{
-	width: 1920px;
+	max-width: 1920px;
 	margin: 0 auto;
+	overflow: auto;
 }
 .gallery3 ul{
 	display: grid;
@@ -1084,8 +1093,9 @@ footer .container{
 	display: flex;
 	column-gap: 50px;
 }
-footer .left-block{
+footer .left-block{ /*ломается на 1100*/
 	flex-basis: 460px;
+	flex-shrink: 18;
 }
 footer .left-block .logo{
 	color: #ccc;
@@ -1097,10 +1107,11 @@ footer .left-block .logo{
 footer .left-block .desc{
 	color: #999;
 	font-size: 14px;
-	margin-bottom: 46px;
+	height: 112px;
 }
 footer .left-block .followers{
 	color: #333;
+	margin-top: 14px;
 	margin-bottom: 14px;
 }
 footer .left-block .followers span{
@@ -1130,6 +1141,7 @@ footer .left-block .social a::before{
 }
 footer .blogs{
 	flex-basis: 370px;
+	flex-shrink: 4;
 }
 footer .blogs>.title{
 	font-size: 14px;
@@ -1163,6 +1175,7 @@ footer .blogs .blogs-item .date{
 }
 footer .instagram{
 	flex-basis: 270px;
+	flex-shrink: 1;
 }
 footer .instagram .title{
 	font-size: 14px;
@@ -1240,3 +1253,80 @@ form.subscribe .input:active{
 form.subscribe .input::placeholder { 
 	color: #ccc;
 }
+
+
+
+
+@media (max-width: 1230px){
+	
+	/*intro*/
+
+	.intro .overhead{
+		font-size: 60px;
+	}
+	.intro h1{
+		font-size: 120px;
+	}
+
+}
+
+@media (max-width: 990px){
+	
+	/*intro*/
+	
+	.intro .overhead{
+		font-size: 32px;
+	}
+	.intro h1{
+		font-size: 80px;
+	}
+
+}
+
+@media (max-width: 770px){
+	
+	/*header*/
+
+	header .user-buttons {
+	    margin-left: 25px;
+	}
+
+	/*slider*/
+
+	.slider ul li{
+		font-size: 14px;
+		line-height: 50px;
+	}
+	.slider ul li span{
+		font-size: 18px;
+	}
+
+}
+@media (max-width: 575px){
+
+	/*header*/
+
+	nav, header .user-buttons{
+		display: none;
+	}
+
+	/*intro*/
+	
+	.intro .overhead{
+		font-size: 22px;
+	}
+	.intro h1{
+		font-size: 40px;
+	}
+
+	/*slider*/
+
+	.slider ul li{
+		font-size: 0;
+		line-height: 40px;
+	}
+	.slider ul li+li {
+	    margin-left: 20px;
+	}
+}
+
