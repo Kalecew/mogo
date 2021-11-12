@@ -314,16 +314,22 @@ nav ul li.active::after
 .gallery ul{
 	display: flex;
 	justify-content: space-between;
+	column-gap: 30px;
 }
 .gallery ul li{
 	position: relative;
 	line-height: 0;
 	box-shadow: 0 0 0 #95e1d3;
 	transition: all .2s linear;
+	flex: 1 1;
 }
 .gallery ul li:hover{
 	transform: translate(-10px, -10px);
 	box-shadow: 10px 10px 0 #95e1d3;
+}
+.gallery ul li img{
+	max-width: 100%;
+	height: auto;
 }
 .gallery ul li .overlay{
 	position: absolute;
@@ -1260,7 +1266,6 @@ form.subscribe .input::placeholder {
 @media (max-width: 1230px){
 	
 	/*intro*/
-
 	.intro .overhead{
 		font-size: 60px;
 	}
@@ -1272,8 +1277,7 @@ form.subscribe .input::placeholder {
 
 @media (max-width: 990px){
 	
-	/*intro*/
-	
+	/*intro*/	
 	.intro .overhead{
 		font-size: 32px;
 	}
@@ -1286,13 +1290,11 @@ form.subscribe .input::placeholder {
 @media (max-width: 770px){
 	
 	/*header*/
-
 	header .user-buttons {
 	    margin-left: 25px;
 	}
 
 	/*slider*/
-
 	.slider ul li{
 		font-size: 14px;
 		line-height: 50px;
@@ -1301,17 +1303,42 @@ form.subscribe .input::placeholder {
 		font-size: 18px;
 	}
 
+	/*about*/
+	.about{
+		padding-top: 45px;
+		padding-bottom: 60px;
+	}
+	.about .title-wrap {
+	    margin-bottom: 50px;
+	}
+
+	/*gallery*/
+	.gallery ul{
+		row-gap: 15px;
+		flex-direction: column;
+		align-items: center;
+	}
 }
+
 @media (max-width: 575px){
 
-	/*header*/
+	/*general*/
+	h2{
+		font-size: 24px;
+	}
+	.overhead{
+		font-size: 20px;
+	}
+	h2 + .line {
+	    margin: 20px auto 25px;
+	}
 
+	/*header*/
 	nav, header .user-buttons{
 		display: none;
 	}
 
-	/*intro*/
-	
+	/*intro*/	
 	.intro .overhead{
 		font-size: 22px;
 	}
@@ -1320,7 +1347,6 @@ form.subscribe .input::placeholder {
 	}
 
 	/*slider*/
-
 	.slider ul li{
 		font-size: 0;
 		line-height: 40px;
