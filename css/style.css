@@ -484,12 +484,12 @@ nav ul li.active::after
 .unique-design .title-wrap{
 	margin-bottom: -20px;
 }
-.ipad{
+.unique-design .ipad{
 	display: block;
 	margin: auto;
 	padding-right: 40px;
 }
-.iphone{
+.unique-design .iphone{
 	position: absolute;
 	bottom: -90px;
 	left: 50%;
@@ -509,7 +509,7 @@ nav ul li.active::after
 }
 .what-we-do .content{
 	display: flex;
-	justify-content: space-between;
+	gap: 30px;
 }
 .what-we-do .accordion{
 	width: 50%;
@@ -1285,22 +1285,6 @@ form.subscribe .input::placeholder {
 		font-size: 120px;
 	}
 
-	/*services*/
-/*	.services dl{
-		column-gap: 0;
-	}
-	.services dl dd {
-	    font-size: 11px;
-	}*/
-	/*.services dl .dl-item {
-    	margin-left: 60px;
-    }
-    .services dl .dl-item::before{
-    	left: -45px;
-    	width: 25px;
-    	height: 25px;
-    }*/
-
 }
 
 @media (max-width: 990px){
@@ -1335,6 +1319,22 @@ form.subscribe .input::placeholder {
 		border-bottom-width: 2px;
 	}
 	
+	/*what-we-do*/
+	.what-we-do {
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+	.what-we-do .content {
+	    flex-wrap: wrap;
+	    justify-content: center;
+	}
+	.what-we-do .accordion {
+	    width: 570px;
+	}
+	.what-we-do .title-wrap {
+	    margin-bottom: 45px;
+	}
+
 }
 
 @media (max-width: 770px){
@@ -1375,7 +1375,7 @@ form.subscribe .input::placeholder {
 	}
 
 	/*uniqua design*/
-	.iphone{
+	.unique-design .iphone{
 		margin-left: 50px;
 	}
 }
@@ -1420,7 +1420,7 @@ form.subscribe .input::placeholder {
 	    font-size: 52px;
 	}
 
-		/*services*/
+	/*services*/
 	.services dl{
 		grid-template-columns: 1fr;
 	}
@@ -1437,13 +1437,18 @@ form.subscribe .input::placeholder {
 	}
 
 	/*uniqua design*/
-	.ipad {
+	.unique-design .ipad {
 	    max-width: 320px;
 	}
-	.iphone {
+	.unique-design .iphone {
 	    bottom: -45px;
 	    max-width: 134px;
 	    margin-left: 30px;
+	}
+
+	/*what-we-do*/
+	.what-we-do img{
+		display: none;
 	}
 }
 
