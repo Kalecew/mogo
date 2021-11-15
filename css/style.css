@@ -1320,10 +1320,6 @@ form.subscribe .input::placeholder {
 	}
 	
 	/*what-we-do*/
-	.what-we-do {
-	    padding-top: 60px;
-	    padding-bottom: 60px;
-	}
 	.what-we-do .content {
 	    flex-wrap: wrap;
 	    justify-content: center;
@@ -1374,9 +1370,24 @@ form.subscribe .input::placeholder {
 	    flex: 1 1 186px;
 	}
 
+	/*services*/
+	.services {
+	    padding-top: 50px;
+	    padding-bottom: 60px;
+	}
+
 	/*uniqua design*/
+	.unique-design{
+	    padding-top: 50px;
+	}
 	.unique-design .iphone{
 		margin-left: 50px;
+	}
+
+	/*what-we-do*/
+	.what-we-do {
+	    padding-top: 60px;
+	    padding-bottom: 60px;
 	}
 }
 
