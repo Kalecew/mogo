@@ -406,18 +406,22 @@ nav ul li.active::after
 .services dl{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 74px 2px 74px;
-	column-gap: 60px;
-	row-gap: 46px;
 	position: relative;
-}
-.services dl .separator{
-	grid-column: span 3;
-	background-color: #e5e5e5;
 }
 .services dl .dl-item{
-	margin-left: 90px;
+	padding-left: 90px;
 	position: relative;
+}
+.services dl .dl-item.tablet-border{
+	padding-bottom: 46px;
+	margin-bottom: 46px;
+	border-bottom: 2px solid #ddd;
+	border-bottom-width: 0;
+}
+.services dl .dl-item.desk-border{
+	padding-bottom: 46px;
+	margin-bottom: 46px;
+	border-bottom: 2px solid #ddd;
 }
 .services dl .dl-item::before{
 	content: "";
@@ -426,25 +430,31 @@ nav ul li.active::after
 	height: 32px;
 	position: absolute;
 	top: 0;
-	left: -60px;
+	left: 30px;
 }
 .services dl .dt-photography::before{
 	background: url("../img/services/clock.svg") center no-repeat;
+	background-size: cover;
 }
 .services dl .dt-web-design::before{
 	background: url("../img/services/line-graph.svg") center no-repeat;
+	background-size: cover;
 }
 .services dl .dt-creativity::before{
 	background: url("../img/services/computer-ok.svg") center no-repeat;
+	background-size: contain;
 }
 .services dl .dt-seo::before{
 	background: url("../img/services/book.svg") center no-repeat;
+	background-size: cover;
 }
 .services dl .dt-css-html::before{
 	background: url("../img/services/house.svg") center no-repeat;
+	background-size: cover;
 }
 .services dl .dt-digital::before{
 	background: url("../img/services/picture.svg") center no-repeat;
+	background-size: cover;
 }
 .services dl dt{
 	color: #333;
@@ -1274,6 +1284,22 @@ form.subscribe .input::placeholder {
 		font-size: 120px;
 	}
 
+	/*services*/
+/*	.services dl{
+		column-gap: 0;
+	}
+	.services dl dd {
+	    font-size: 11px;
+	}*/
+	/*.services dl .dl-item {
+    	margin-left: 60px;
+    }
+    .services dl .dl-item::before{
+    	left: -45px;
+    	width: 25px;
+    	height: 25px;
+    }*/
+
 }
 
 @media (max-width: 990px){
@@ -1296,6 +1322,19 @@ form.subscribe .input::placeholder {
 	    padding-top: 30px;
 	    padding-bottom: 40px;
 	}
+
+	/*services*/
+	.services dl{
+		grid-template-columns: 1fr 1fr;
+	}
+	.services dl .dl-item.desk-border{
+		border-bottom-width: 0;
+	}
+	.services dl .dl-item.tablet-border{
+		border-bottom-width: 2px;
+	}
+	
+}
 
 @media (max-width: 770px){
 	
@@ -1369,9 +1408,26 @@ form.subscribe .input::placeholder {
 	.slider ul li+li {
 	    margin-left: 20px;
 	}
+
 	/*statistics*/
 	.statistics ul li span{
 	    font-size: 52px;
+	}
+
+		/*services*/
+	.services dl{
+		grid-template-columns: 1fr;
+	}
+	.services dl .dl-item.tablet-border{
+		border-bottom-width: 0;
+	}
+	.services dl .dl-item{
+		padding-bottom: 40px;
+		max-width: 400px;
+		margin:  0 auto !important;
+	}
+	.services dl .dl-item:last-child{
+		padding-bottom: 0
 	}
 }
 
