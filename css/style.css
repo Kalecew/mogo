@@ -659,7 +659,8 @@ nav ul li.active::after
 	background: url("../img/quotes/speach.svg") center no-repeat;
 	background-size: cover;
 	position: absolute;
-	top: 35px;
+	top: 50%;
+    transform: translateY(-50%);
 	left: 112px;
 }
 .slider-quotes figure blockquote{
@@ -1389,6 +1390,27 @@ form.subscribe .input::placeholder {
 	    padding-top: 60px;
 	    padding-bottom: 60px;
 	}
+
+	/*quotes*/
+	.quotes{
+		height: 200px;
+	}
+
+	/*slider-quotes*/
+	.slider-quotes figure {
+	    margin-left: 100px;
+	}
+	.slider-quotes figure::before {
+	    width: 75px;
+	    height: 75px;
+	    left: 80px;
+	}
+	.slider-quotes figure blockquote{
+		font-size: 13px;
+	}
+	.slider-quotes figure figcaption cite{
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 575px){
@@ -1460,6 +1482,37 @@ form.subscribe .input::placeholder {
 	/*what-we-do*/
 	.what-we-do img{
 		display: none;
+	}
+
+	/*quotes*/
+	.quotes {
+	    height: 320px;
+	}
+
+	/*slider-quotes*/
+	.slider-quotes{
+		padding: 0 45px;
+	}
+	.slider-quotes::before {
+	    left: 10px;
+	}
+	.slider-quotes::after {
+	    right: 10px;
+	}
+	.slider-quotes figure {
+	    margin-left: 0;
+	}
+	.slider-quotes figure::before {
+		position: static;
+	    display: block;
+	    margin: 0 auto 20px;
+	    transform: none;
+	}
+	.slider-quotes figure blockquote{
+		font-size: 11px;
+	}
+	.slider-quotes figure figcaption cite{
+		font-size: 12px;
 	}
 }
 
