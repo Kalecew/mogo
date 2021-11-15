@@ -492,7 +492,8 @@ nav ul li.active::after
 .iphone{
 	position: absolute;
 	bottom: -90px;
-	right: 19%;
+	left: 50%;
+	margin-left: 100px;
 }
 
 
@@ -1372,6 +1373,11 @@ form.subscribe .input::placeholder {
 	.statistics ul li {
 	    flex: 1 1 186px;
 	}
+
+	/*uniqua design*/
+	.iphone{
+		margin-left: 50px;
+	}
 }
 
 @media (max-width: 575px){
@@ -1428,6 +1434,16 @@ form.subscribe .input::placeholder {
 	}
 	.services dl .dl-item:last-child{
 		padding-bottom: 0
+	}
+
+	/*uniqua design*/
+	.ipad {
+	    max-width: 320px;
+	}
+	.iphone {
+	    bottom: -45px;
+	    max-width: 134px;
+	    margin-left: 30px;
 	}
 }
 
