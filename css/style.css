@@ -925,9 +925,6 @@ nav ul li.active::after
 	overflow: hidden;
 	border-radius: 50%;
 }
-.slider-reviews figure .img-wrap img{
-	margin-left: -50px;
-}
 .slider-reviews figure blockquote{
 	font-style: italic;
 	font-weight: 300;
@@ -1442,6 +1439,31 @@ form.subscribe .input::placeholder {
     	font-size: 12px;
     }
 
+    /*reviews*/
+    .reviews {
+    	height: 325px;
+    }
+
+    /*slider-reviews*/
+
+    .slider-reviews figure .img-wrap {
+	    width: 100px;
+	    height: 100px;
+	}
+	.slider-reviews figure .img-wrap img{
+		width: 100%;
+		height: auto;
+	}
+	.slider-reviews figure {
+	    margin-left: 120px;
+	}
+	.slider-reviews figure blockquote {
+	    font-size: 16px;
+	}
+	.slider-reviews figure figcaption cite {
+    	font-size: 18px;
+    }
+
 }
 
 @media (max-width: 575px){
@@ -1557,9 +1579,40 @@ form.subscribe .input::placeholder {
 	    margin: 0 auto;
 	}
 
+	/*clients*/
 	.clients .content{
 		flex-wrap: wrap;
 		justify-content: space-around;
+	}
+
+	/*reviews*/
+	.reviews {
+	    height: 400px;
+	}
+	
+	/*slider-reviews*/
+	.slider-reviews {
+	    padding: 0 40px;
+	}
+	.slider-reviews::before {
+	    left: 10px;
+	}
+	.slider-reviews::after {
+	    right: 10px;
+	}
+	.slider-reviews figure {
+	    margin-left: 0;
+	}
+	.slider-reviews figure .img-wrap{
+		position: static;
+		margin: 0 auto 20px;
+		transform: none;
+	}
+	.slider-reviews figure blockquote {
+	    font-size: 12px;
+	}
+	.slider-reviews figure figcaption cite {
+	    font-size: 14px;
 	}
 }
 
