@@ -1015,6 +1015,8 @@ nav ul li.active::after
 }
 .latest-posts .latest-posts-item{
 	width: 32%;
+	display: flex;
+    flex-direction: column;
 }
 .latest-posts .latest-posts-item .img-wrap{
 	position: relative;
@@ -1046,23 +1048,23 @@ nav ul li.active::after
 	font-size: 14px;
 	text-transform: uppercase;
 	margin-bottom: 14px;
+	flex-grow: 1;
+	flex-basis: 22px;
 }
 .latest-posts .latest-posts-item .desc{
 	font-size: 14px;
 	color: #999;
 	margin-bottom: 18px;
-}
-.latest-posts .latest-posts-item .separator{
-	width: 100%;
-	height: 1px;
-	background-color: #e5e5e5;
+	flex-grow: 1;
+	flex-basis: 44px;
 }
 .latest-posts .latest-posts-item .stat{
 	color: #b3b3b3;
 	font-size: 14px;
 	font-weight: 300;
 	font-style: italic;
-	margin-top: 18px;
+	padding-top: 18px;
+	border-top: 1px solid #e5e5e5;
 	display: flex;
 }
 .latest-posts .latest-posts-item .stat .comments-number{
@@ -1340,6 +1342,13 @@ form.subscribe .input::placeholder {
 	    margin-right: auto;
 	}
 
+	/*latest-posts*/
+	.latest-posts .latest-posts-item .desc{
+		margin-bottom: 12px;
+	}
+	.latest-posts .latest-posts-item .stat{
+		padding-top: 12px;
+	}
 }
 
 @media (max-width: 770px){
@@ -1483,6 +1492,21 @@ form.subscribe .input::placeholder {
 	    margin-top: 0;
 	}
 
+	/*latest-blog*/
+	.latest-blog {
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+
+	/*latest-posts*/
+	.latest-posts .latest-posts-item .img-wrap .date {
+	    width: 50px;
+	    height: 60px;
+	    bottom: 5px;
+	    left: -5px;
+	    font-size: 13px;
+	}
+	
 }
 
 @media (max-width: 575px){
@@ -1641,6 +1665,17 @@ form.subscribe .input::placeholder {
     }
 	.block-reviews .reviews-item .img-wrap {
 		position: static;
+		margin-bottom: 10px;
+	}
+
+	/*latest-posts*/
+	.latest-posts {
+	    flex-direction: column;
+	}
+	.latest-posts .latest-posts-item {
+	    max-width: 380px;
+	    width: 100%;
+	    margin: 0 auto 40px;
 	}
 
 }
