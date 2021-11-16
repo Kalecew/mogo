@@ -209,7 +209,7 @@ nav ul li.active::after
 
 .intro{
 	height: 100vh;
-	/*min-height: 870px;*/
+	min-height: 800px;
 	background: url("../img/back-intro.png") center no-repeat;
 	background-size: cover;
 }
