@@ -699,7 +699,7 @@ nav ul li.active::after
 /*gallery2*/
 .gallery2{
 	display: flex;
-	justify-content: space-between;
+	gap: 30px;
 }
 .gallery2 figure .img-wrap{
 	box-shadow: 0 0 0 #95e1d3;
@@ -712,6 +712,8 @@ nav ul li.active::after
 }
 .gallery2 figure .img-wrap img{
 	display: block;
+	max-width: 100%;
+    height: auto;
 }
 .gallery2 figure .img-wrap .overlay{
 	position: absolute;
@@ -762,8 +764,6 @@ nav ul li.active::after
 .gallery2 figure .overlay .social-wrap a::before{
 	display: block;
 	text-align: center;
-	width: 100%;
-	height: 100%;
 	line-height: 56px;
 	font-size: 24px;
 	color: #f38181;
@@ -783,13 +783,17 @@ nav ul li.active::after
 
 .clients{
 	background-color: #f8f8f8;
-	height: 250px;
+	padding: 50px 0;
 }
-.clients .container{
-	height: 100%;
+.clients .content{
 	display: flex;
+	gap: 14px;
 	justify-content: space-between;
-	align-items: center;
+}
+.clients img{
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 
@@ -1411,6 +1415,33 @@ form.subscribe .input::placeholder {
 	.slider-quotes figure figcaption cite{
 		font-size: 14px;
 	}
+
+	/*team*/
+	.team {
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+	.team .title-wrap {
+	    margin-bottom: 45px;
+	}
+
+	/*gallery2*/
+	.gallery2 figure .overlay .social-wrap a{
+		width: 36px;
+		height: 36px;
+	}
+	.gallery2 figure .overlay .social-wrap a::before{
+		line-height: 36px;
+		font-size: 16px;
+	}
+	.gallery2 figure .title {
+	    font-size: 11px;
+	    line-height: 1;
+	}
+	.gallery2 figure .desc {
+    	font-size: 12px;
+    }
+
 }
 
 @media (max-width: 575px){
@@ -1513,6 +1544,22 @@ form.subscribe .input::placeholder {
 	}
 	.slider-quotes figure figcaption cite{
 		font-size: 12px;
+	}
+
+	/*gallery2*/
+	.gallery2 {
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	gap: 15px;
+    }
+    .gallery2 figure .img-wrap {
+	    max-width: 70%;
+	    margin: 0 auto;
+	}
+
+	.clients .content{
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 }
 
