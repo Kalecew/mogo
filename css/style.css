@@ -816,12 +816,11 @@ nav ul li.active::after
 .gallery3{
 	max-width: 1920px;
 	margin: 0 auto;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 .gallery3 ul{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
 }
 .gallery3 ul li{
 	position: relative;
@@ -831,6 +830,10 @@ nav ul li.active::after
 }
 .gallery3 ul li.long{
 	grid-row: span 2;
+}
+.gallery3 ul li img{
+	width: 100%;
+	height: 100%;
 }
 .gallery3 ul li .overlay{
 	position: absolute;
@@ -1114,9 +1117,12 @@ footer .container{
 	display: flex;
 	column-gap: 50px;
 }
-footer .left-block{ /*ломается на 1100*/
-	flex-basis: 460px;
-	flex-shrink: 18;
+footer .left-block{ 
+	flex-basis: 363px;
+	flex-shrink: 0;
+	flex-grow: 1;
+	display: flex;
+    flex-direction: column;
 }
 footer .left-block .logo{
 	color: #ccc;
@@ -1129,10 +1135,11 @@ footer .left-block .desc{
 	color: #999;
 	font-size: 14px;
 	height: 112px;
+	margin-bottom: 14px;
 }
 footer .left-block .followers{
 	color: #333;
-	margin-top: 14px;
+	margin-top: auto;
 	margin-bottom: 14px;
 }
 footer .left-block .followers span{
@@ -1162,7 +1169,6 @@ footer .left-block .social a::before{
 }
 footer .blogs{
 	flex-basis: 370px;
-	flex-shrink: 4;
 }
 footer .blogs>.title{
 	font-size: 14px;
@@ -1170,25 +1176,24 @@ footer .blogs>.title{
 	margin-bottom: 46px;
 }
 footer .blogs .blogs-item{
-	margin-left: 140px;
-	position: relative;
 	height: 80px;
 	margin-bottom: 28px;
-	padding-top: 18px;
+	display: flex;
+	column-gap: 20px;
 }
 footer .blogs .blogs-item:last-child{
 	margin-bottom: 0;
 }
-footer .blogs .blogs-item img{
-	position: absolute;
-	left: -140px;
-	top: 0;
+footer .blogs .blogs-item .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-footer .blogs .blogs-item .title{
+footer .blogs .blogs-item .text .title{
 	font-size: 12px;
 	text-transform: uppercase;
 }
-footer .blogs .blogs-item .date{
+footer .blogs .blogs-item .text .date{
 	color: #999;
 	font-size: 11px;
 	font-weight: 300;
@@ -1196,7 +1201,7 @@ footer .blogs .blogs-item .date{
 }
 footer .instagram{
 	flex-basis: 270px;
-	flex-shrink: 1;
+	flex-shrink: 0;
 }
 footer .instagram .title{
 	font-size: 14px;
@@ -1227,6 +1232,7 @@ footer .copyright{
 	height: 60px;
 	border-top: 1px solid #e5e5e5;
 	margin-top: 70px;
+	text-align: center;
 }
 footer .copyright span{
 	color:  #f38181;
@@ -1287,6 +1293,11 @@ form.subscribe .input::placeholder {
 	.intro h1{
 		font-size: 120px;
 	}
+	/*footer*/
+	footer .container{
+		flex-wrap: wrap;
+		row-gap: 70px;
+	}
 
 }
 
@@ -1342,12 +1353,28 @@ form.subscribe .input::placeholder {
 	    margin-right: auto;
 	}
 
+	/*gallery3*/
+	.gallery3 ul li .overlay .title {
+	    font-size: 12px;
+	}
+	.gallery3 ul li .overlay .desc {
+	    font-size: 12px;
+	}
+
 	/*latest-posts*/
 	.latest-posts .latest-posts-item .desc{
 		margin-bottom: 12px;
 	}
 	.latest-posts .latest-posts-item .stat{
 		padding-top: 12px;
+	}
+
+	/*footer*/
+	footer .left-block .desc {
+    	height: auto;
+	}
+	footer .blogs {
+	    flex-basis: 328px;
 	}
 }
 
@@ -1460,8 +1487,15 @@ form.subscribe .input::placeholder {
     	height: 325px;
     }
 
-    /*slider-reviews*/
+    /*our-work*/
+    .our-work{
+		padding-top: 60px;
+	}
+	.our-work .title-wrap{
+		margin-bottom: 45px;
+	}
 
+    /*slider-reviews*/
     .slider-reviews figure .img-wrap {
 	    width: 100px;
 	    height: 100px;
@@ -1485,6 +1519,15 @@ form.subscribe .input::placeholder {
 	    padding-top: 60px;
 	    padding-bottom: 60px;
 	}
+
+	/*gallery3*/
+	.gallery3 ul li .overlay .title {
+	    font-size: 10px;
+	}
+	.gallery3 ul li .overlay .desc {
+	    font-size: 10px;
+	}
+
 
 	/*block-reviews*/
 	.block-reviews {
@@ -1633,6 +1676,12 @@ form.subscribe .input::placeholder {
 	    height: 400px;
 	}
 
+	/*gallery3*/
+	.gallery3 ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
 	/*slider-reviews*/
 	.slider-reviews {
 	    padding: 0 40px;
@@ -1676,6 +1725,25 @@ form.subscribe .input::placeholder {
 	    max-width: 380px;
 	    width: 100%;
 	    margin: 0 auto 40px;
+	}
+
+	/*footer*/
+	footer .left-block{
+		flex-basis: 0;
+	}
+	footer .left-block .social a{
+		margin-right: 10px;
+	}
+	footer .blogs {
+	    flex-basis: 370px;
+	}
+	form.subscribe {
+	    flex-direction: column;
+	    max-width: 100%;
+	}
+	form.subscribe .input{
+		border-right: 1px solid #e5e5e5;
+		margin-bottom: 10px;
 	}
 
 }
