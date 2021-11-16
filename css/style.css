@@ -209,17 +209,18 @@ nav ul li.active::after
 
 .intro{
 	height: 100vh;
-	min-height: 870px;
+	/*min-height: 870px;*/
 	background: url("../img/back-intro.png") center no-repeat;
 	background-size: cover;
 }
 .intro .container{
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	height: 100%;
 	flex-direction: column;
-	position: relative;
+}
+.intro .container .center{
+	margin: auto;
 }
 .intro .overhead{
 	color: #fff;
@@ -259,10 +260,7 @@ nav ul li.active::after
 /*slider*/
 
 .slider{
-	position: absolute;
-    bottom: 0px;
-    left: 15px;
-    right: 15px;
+	align-self: stretch;
 }
 .slider ul{
 	display: flex;
@@ -1314,12 +1312,13 @@ form.subscribe .input::placeholder {
 	/*statistics*/
 	.statistics ul{
 		flex-wrap: wrap;
+		padding: 30px;
+		row-gap: 15px;
 	}
 	.statistics ul li {
 	    flex: 1 1 250px;
 	    border: none !important;
-	    padding-top: 30px;
-	    padding-bottom: 40px;
+	    padding: 0;
 	}
 
 	/*services*/
@@ -1610,12 +1609,13 @@ form.subscribe .input::placeholder {
 
 	/*uniqua design*/
 	.unique-design .ipad {
-	    max-width: 320px;
+	    max-width: 290px;
+	    padding: 0;
 	}
 	.unique-design .iphone {
 	    bottom: -45px;
-	    max-width: 134px;
-	    margin-left: 30px;
+	    max-width: 138px;
+    	margin-left: 15px;
 	}
 
 	/*what-we-do*/
