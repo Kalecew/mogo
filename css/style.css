@@ -410,12 +410,6 @@ nav ul li.active::after
 	padding-left: 90px;
 	position: relative;
 }
-.services dl .dl-item.tablet-border{
-	padding-bottom: 46px;
-	margin-bottom: 46px;
-	border-bottom: 2px solid #ddd;
-	border-bottom-width: 0;
-}
 .services dl .dl-item.desk-border{
 	padding-bottom: 46px;
 	margin-bottom: 46px;
@@ -1329,7 +1323,9 @@ form.subscribe .input::placeholder {
 		border-bottom-width: 0;
 	}
 	.services dl .dl-item.tablet-border{
-		border-bottom-width: 2px;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		border-bottom: 2px solid #ddd;
 	}
 	
 	/*what-we-do*/
@@ -1384,6 +1380,11 @@ form.subscribe .input::placeholder {
 	    margin-left: 25px;
 	}
 
+	/*intro*/
+	.intro{
+		min-height: 650px;
+	}
+
 	/*slider*/
 	.slider ul li{
 		font-size: 14px;
@@ -1419,10 +1420,13 @@ form.subscribe .input::placeholder {
 	    padding-top: 50px;
 	    padding-bottom: 60px;
 	}
+	.services .title-wrap {
+	    margin-bottom: 0;
+	}
 
 	/*uniqua design*/
 	.unique-design{
-	    padding-top: 50px;
+	    padding-top: 70px;
 	}
 	.unique-design .iphone{
 		margin-left: 50px;
@@ -1430,7 +1434,7 @@ form.subscribe .input::placeholder {
 
 	/*what-we-do*/
 	.what-we-do {
-	    padding-top: 60px;
+	    padding-top: 70px;
 	    padding-bottom: 60px;
 	}
 
@@ -1577,6 +1581,11 @@ form.subscribe .input::placeholder {
 		font-size: 40px;
 	}
 
+	/*about*/
+	.about .title-wrap {
+	    margin-bottom: 25px;
+	}
+
 	/*slider*/
 	.slider ul li{
 		font-size: 0;
@@ -1619,6 +1628,9 @@ form.subscribe .input::placeholder {
 	}
 
 	/*what-we-do*/
+	.what-we-do .title-wrap {
+	    margin-bottom: 30px;
+	}
 	.what-we-do img{
 		display: none;
 	}
@@ -1654,6 +1666,11 @@ form.subscribe .input::placeholder {
 		font-size: 12px;
 	}
 
+	/*team*/
+	.team .title-wrap {
+	    margin-bottom: 30px;
+	}
+
 	/*gallery2*/
 	.gallery2 {
     	flex-wrap: wrap;
@@ -1671,15 +1688,20 @@ form.subscribe .input::placeholder {
 		justify-content: space-around;
 	}
 
-	/*reviews*/
-	.reviews {
-	    height: 400px;
+	/*our-work*/
+	.our-work .title-wrap {
+	    margin-bottom: 30px;
 	}
 
 	/*gallery3*/
 	.gallery3 ul{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+	}
+
+	/*reviews*/
+	.reviews {
+	    height: 400px;
 	}
 
 	/*slider-reviews*/
@@ -1715,6 +1737,14 @@ form.subscribe .input::placeholder {
 	.block-reviews .reviews-item .img-wrap {
 		position: static;
 		margin-bottom: 10px;
+	}
+
+	/*latest-blog*/
+	.latest-blog {
+	    padding-bottom: 40px;
+	}
+	.latest-blog .title-wrap{
+		margin-bottom: 10px
 	}
 
 	/*latest-posts*/
