@@ -13,19 +13,19 @@
 </head>
 <body>
 
-	<header>
+	<header id="header">
 		<div class="container">
-			<div class="logo">MoGo</div>
-			<button class="nav-toggle">
+			<a href="#" class="logo">MoGo</a>
+			<button class="nav-toggle" id="nav-toggle">
 				<div>Меню</div>
 			</button>
 			<nav>
 				<ul>
-					<li class="active"><a href="#">About</a></li>
-					<li><a href="#">Service</a></li>
-					<li><a href="#">Work</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contact</a></li>				
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Service</a></li>
+					<li><a href="#our-work">Work</a></li>
+					<li><a href="#latest-blog">Blog</a></li>
+					<li><a href="#open-map">Contact</a></li>				
 				</ul>
 				<div class="user-buttons">
 					<button type="button" class="shopping">Shopping cart</button>
@@ -37,7 +37,7 @@
 		</div>
 	</header>
 
-	<section class="intro">
+	<section class="intro" id="intro">
 		<div class="container">
 			<div class="center">
 				<p class="overhead">Creative Template</p>
@@ -56,7 +56,7 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="center title-wrap">
 				<div class="overhead">What we do</div>
@@ -103,7 +103,7 @@
 		</div>
 	</section>
 
-	<section class="services">
+	<section class="services" id="services">
 		<div class="container">
 			<div class="center title-wrap">
 				<div class="overhead">We work with</div>
@@ -162,7 +162,7 @@
 			</div>
 			<div class="content">
 				<img src="files/wall.jpg" alt="wall">
-				<div class="accordion">
+				<div class="accordion" id="accordion">
 					<dl>
 						<dt class="dt-photography active">Photography</dt>
 						<dd>
@@ -312,7 +312,7 @@
 		</div>
 	</section>
 
-	<section class="our-work">
+	<section class="our-work" id="our-work">
 		<div class="container">
 			<div class="center title-wrap">
 				<div class="overhead">What we do</div>
@@ -462,7 +462,7 @@
 		</div>
 	</section>
 
-	<section class="latest-blog">
+	<section class="latest-blog" id="latest-blog">
 		<div class="container">
 			<div class="center title-wrap">
 				<div class="overhead">Our stories</div>
@@ -512,7 +512,7 @@
 		</div>
 	</section>
 
-	<section class="open-map">
+	<section class="open-map" id="open-map">
 		<a href="#" target="_blank" class="center title-wrap">
 			<i class="fas fa-map-marker-alt"></i>
 			<h2>Open map</h2>
@@ -588,5 +588,8 @@
 			</div>
 		</div>		
 	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
