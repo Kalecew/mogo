@@ -37,5 +37,16 @@ $(function(){
 		}		
 	});
 
+	// slick-slider activate
+	  $('.slider-quotes').slick({
+	    autoplay: true,
+  		autoplaySpeed: 2000,
+  		// fade: true,
+	  });
+	  $('.slider-reviews').slick({
+		autoplay: true,
+  		autoplaySpeed: 2000,
+  		// fade: true,
+	  });
 
 }); 
