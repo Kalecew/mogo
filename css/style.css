@@ -883,7 +883,6 @@ nav .user-buttons .search{
 .gallery3{
 	max-width: 1920px;
 	margin: 0 auto;
-	/*overflow: auto;*/
 }
 .gallery3 ul{
 	display: grid;
@@ -920,6 +919,9 @@ nav .user-buttons .search{
 	color: #fff;
 	font-size: 14px;
 	line-height: 4;
+}
+.gallery3 ul li .overlay .title:hover{
+	text-decoration: underline;
 }
 .gallery3 ul li .overlay .title::before{
 	content: "";
@@ -1123,6 +1125,9 @@ nav .user-buttons .search{
 	flex-grow: 1;
 	flex-basis: 22px;
 }
+.latest-posts .latest-posts-item .title:hover{
+	text-decoration: underline;
+}
 .latest-posts .latest-posts-item .desc{
 	font-size: 14px;
 	color: #999;
@@ -1173,6 +1178,9 @@ nav .user-buttons .search{
 .open-map .title-wrap .line{
 	margin: 15px 0 0;
 }
+.open-map .title-wrap:hover i{color: #D37070}
+.open-map .title-wrap:hover h2{color: #D37070}
+.open-map .title-wrap:hover .line{background-color: #D37070}
 
 
 
@@ -1236,6 +1244,9 @@ footer .left-block .social a::before{
 	font-size: 15px;
 	color: #95e1d3;
 }
+footer .left-block .social a:hover::before{
+	color: #f38181;
+}
 footer .blogs{
 	flex-basis: 370px;
 }
@@ -1261,6 +1272,9 @@ footer .blogs .blogs-item .text{
 footer .blogs .blogs-item .text .title{
 	font-size: 12px;
 	text-transform: uppercase;
+}
+footer .blogs .blogs-item .text .title:hover{
+	text-decoration: underline;
 }
 footer .blogs .blogs-item .text .date{
 	color: #999;
@@ -1294,6 +1308,9 @@ footer .instagram .more{
 	font-weight: 300;
 	font-style: italic;
 	margin-top: 15px;
+}
+footer .instagram .more:hover{
+	text-decoration: underline;
 }
 footer .copyright{
 	width: 100%;
