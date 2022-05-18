@@ -542,6 +542,7 @@ nav .user-buttons .search{
 	padding-top: 110px;
 	background: url("../img/back-unique-design.png") center no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 .unique-design .container{
 	position: relative;
