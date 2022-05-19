@@ -382,27 +382,31 @@ nav .user-buttons .search{
 
 
 /*gallery*/
-.gallery ul{
+.gallery__list {
 	display: flex;
 	justify-content: space-between;
-	column-gap: 30px;
 }
-.gallery ul li{
+.gallery__item + .gallery__item {
+	margin: 0 0 0 30px;
+}
+.gallery__card {
+	flex: 1 1;
+}
+.card-gallery {
 	position: relative;
 	line-height: 0;
 	box-shadow: 0 0 0 #95e1d3;
 	transition: all .2s linear;
-	flex: 1 1;
 }
-.gallery ul li:hover{
+.card-gallery:hover {
 	transform: translate(-10px, -10px);
 	box-shadow: 10px 10px 0 #95e1d3;
 }
-.gallery ul li img{
+.card-gallery__img{
 	max-width: 100%;
 	height: auto;
 }
-.gallery ul li .overlay{
+.card-gallery__overlay{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -412,17 +416,17 @@ nav .user-buttons .search{
 	opacity: 0;
 	transition: opacity .2s linear;
 }
-.gallery ul li:hover .overlay{
+.card-gallery:hover .card-gallery__overlay{
 	opacity: 0.9;
 }
-.gallery ul li .overlay p{
+.card-gallery__desc{
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 18px;
 	line-height: 36px;
 	font-weight: bold;
 }
-.gallery ul li .overlay p::before{
+.card-gallery__desc::before{
 	content: "";
 	background: url("../img/gallery/users.svg") center no-repeat;
 	display: block;
@@ -575,7 +579,6 @@ nav .user-buttons .search{
 }
 .what-we-do .content{
 	display: flex;
-	gap: 30px;
 }
 .what-we-do .accordion{
 	width: 50%;
@@ -583,6 +586,7 @@ nav .user-buttons .search{
 .what-we-do img{
 	width: 570px;
 	height: 380px;
+	margin: 0 30px 0 0;
 }
 
 
@@ -767,7 +771,9 @@ nav .user-buttons .search{
 /*gallery2*/
 .gallery2{
 	display: flex;
-	gap: 30px;
+}
+.gallery2 figure + figure {
+	margin: 0 0 0 30px;
 }
 .gallery2 figure .img-wrap{
 	box-shadow: 0 0 0 #95e1d3;
@@ -855,8 +861,10 @@ nav .user-buttons .search{
 }
 .clients .content{
 	display: flex;
-	gap: 14px;
 	justify-content: space-between;
+}
+.clients li + li {
+	margin: 0 0 0 14px;
 }
 .clients img{
 	max-width: 100%;
@@ -1193,7 +1201,6 @@ footer{
 }
 footer .container{
 	display: flex;
-	column-gap: 50px;
 }
 footer .left-block{ 
 	flex-basis: 363px;
@@ -1201,6 +1208,7 @@ footer .left-block{
 	flex-grow: 1;
 	display: flex;
     flex-direction: column;
+    margin: 0 50px 0 0;
 }
 footer .left-block .logo{
 	color: #ccc;
@@ -1250,6 +1258,7 @@ footer .left-block .social a:hover::before{
 }
 footer .blogs{
 	flex-basis: 370px;
+	margin: 0 50px 0 0;
 }
 footer .blogs>.title{
 	font-size: 14px;
@@ -1258,17 +1267,16 @@ footer .blogs>.title{
 }
 footer .blogs .blogs-item{
 	height: 80px;
-	margin-bottom: 28px;
 	display: flex;
-	column-gap: 20px;
 }
-footer .blogs .blogs-item:last-child{
-	margin-bottom: 0;
+footer .blogs .blogs-item + .blogs-item{
+	margin-top: 28px;
 }
 footer .blogs .blogs-item .text{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-left: 20px;
 }
 footer .blogs .blogs-item .text .title{
 	font-size: 12px;
@@ -1296,7 +1304,7 @@ footer .instagram .instagram-photos{
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 2px;
+	grid-gap: 2px;
 }
 footer .instagram .instagram-photos img{
 	width: 100%;
@@ -1388,7 +1396,12 @@ form.subscribe .input::placeholder {
 	/*footer*/
 	footer .container{
 		flex-wrap: wrap;
-		row-gap: 70px;
+	}
+	footer .left-block {
+		margin: 0 50px 70px 0;
+	}
+	footer .blogs {
+		margin: 0 50px 70px 0;
 	}
 
 }
@@ -1408,7 +1421,9 @@ form.subscribe .input::placeholder {
 	.statistics ul{
 		flex-wrap: wrap;
 		padding: 30px;
-		row-gap: 15px;
+	}
+	.statistics ul li + li {
+		margin-top: 15px;
 	}
 	.statistics ul li {
 	    flex: 1 1 250px;
@@ -1440,6 +1455,9 @@ form.subscribe .input::placeholder {
 	.what-we-do .title-wrap {
 	    margin-bottom: 45px;
 	}
+	.what-we-do img {
+		margin: 0 0 30px 0;
+	}
 
 	/*block-reviews*/
 	.block-reviews{
@@ -1470,7 +1488,7 @@ form.subscribe .input::placeholder {
     	height: auto;
 	}
 	footer .blogs {
-	    flex-basis: 328px;
+		flex-basis: 328px;
 	}
 }
 
@@ -1505,10 +1523,12 @@ form.subscribe .input::placeholder {
 	}
 
 	/*gallery*/
-	.gallery ul{
-		row-gap: 15px;
+	.gallery__list{
 		flex-direction: column;
 		align-items: center;
+	}
+	.gallery__item + .gallery__item {
+		margin: 12px 0 0 0;
 	}
 
 	/*statistics*/
@@ -1789,8 +1809,10 @@ form.subscribe .input::placeholder {
 	.gallery2 {
     	flex-wrap: wrap;
     	justify-content: center;
-    	gap: 15px;
     }
+    .gallery2 figure + figure {
+		margin: 15px 0 0 0;
+	}
     .gallery2 figure .img-wrap {
 	    max-width: 70%;
 	    margin: 0 auto;
@@ -1800,6 +1822,9 @@ form.subscribe .input::placeholder {
 	.clients .content{
 		flex-wrap: wrap;
 		justify-content: space-around;
+	}
+	.clients li + li {
+		margin: 0;
 	}
 
 	/*our-work*/
@@ -1878,9 +1903,15 @@ form.subscribe .input::placeholder {
 	footer .left-block .social a{
 		margin-right: 10px;
 	}
-	footer .blogs {
-	    flex-basis: 370px;
+	footer .left-block {
+		margin: 0 0 70px 0;
 	}
+	footer .blogs {		
+		margin: 0 0 70px 0;
+		flex-basis: 370px;
+	}
+
+	/*form*/
 	form.subscribe {
 	    flex-direction: column;
 	    max-width: 100%;
